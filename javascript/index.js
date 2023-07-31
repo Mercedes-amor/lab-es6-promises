@@ -31,7 +31,32 @@
 // ...
 
 // Iteration 2 - using promises
-// ...
+obtainInstruction('steak', 0)
+  .then( (step0) => {
+    document.querySelector("#steak").innerHTML += `<li>${step0}</li>`
+    //  ... Your code here
+    
+  })
+
+  Promise.allSettled([
+    obtainInstruction('steak', 0),
+    obtainInstruction('steak', 1), 
+    obtainInstruction('steak', 2),
+    obtainInstruction('steak', 3),
+    obtainInstruction('steak', 4),
+    obtainInstruction('steak', 5),
+    obtainInstruction('steak', 6),
+    obtainInstruction('steak', 7),
+])
+.then((response) => {
+    console.log(response)
+})
+.catch ((error) => {
+  console.log(error)
+})
+  // ... Your code here
+
+
 
 // Iteration 3 using async/await
 // ...
