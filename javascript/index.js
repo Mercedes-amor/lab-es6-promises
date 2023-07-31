@@ -146,20 +146,29 @@ obtainInstruction("steak", 0)
 async function makeBroccoli() {
   try {
     const response1 = await obtainInstruction("broccoli", 0) 
-    document.querySelector("#broccoli").innerHTML += `<li>${step0}</li>`;
+    document.querySelector("#broccoli").innerHTML += `<li>${response1}</li>`;
     console.log(response1);
     const response2 = await obtainInstruction("broccoli", 1);
+    document.querySelector("#broccoli").innerHTML += `<li>${response2}</li>`;
     console.log(response2);
-    const response3 = await obtainInstruction("broccoli", 2);
+    const response3 = await obtainInstruction("broccoli", 2)
+    document.querySelector("#broccoli").innerHTML += `<li>${response3}</li>`;;
     console.log(response3);
-    const response4 = await obtainInstruction("broccoli", 3);
+    const response4 = await obtainInstruction("broccoli", 3)
+    document.querySelector("#broccoli").innerHTML += `<li>${response4}</li>`;;
     console.log(response4);
     const response5 = await obtainInstruction("broccoli", 4);
+    document.querySelector("#broccoli").innerHTML += `<li>${response5}</li>`;
     console.log(response5);
     const response6 = await obtainInstruction("broccoli", 5);
+    document.querySelector("#broccoli").innerHTML += `<li>${response6}</li>`;
     console.log(response6);
     const response7 = await obtainInstruction("broccoli", 6);
+    document.querySelector("#broccoli").innerHTML += `<li>${response7}</li>`;
     console.log(response7);
+    
+    document.querySelector("#broccoli").innerHTML += `<li>"broccoli is ready"</li>`;
+    
   } catch (error) {
     console.log(error);
   }
